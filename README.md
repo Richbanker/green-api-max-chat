@@ -4,6 +4,8 @@
 
 React 19, TypeScript, Vite. Стили — обычный CSS, запросы — `fetch`. Из зависимостей приложения только `react` и `react-dom`. Сервер приложения и SDK не нужны.
 
+**Демо:** [richbanker.github.io/green-api-max-chat](https://richbanker.github.io/green-api-max-chat/)
+
 ## Локальный запуск
 
 Нужен Node.js **22.13 или новее** (ветка 22 LTS указана в `.nvmrc`) и npm.
@@ -86,22 +88,13 @@ src/
 tests/                тесты на подменённых ответах API
 ```
 
-## GitHub и публикация
+## Публикация
 
-Создайте пустой репозиторий в своём GitHub и выполните из папки проекта, подставив его адрес:
+Рабочая версия размещена на GitHub Pages: [открыть приложение](https://richbanker.github.io/green-api-max-chat/).
 
-```bash
-git init -b main
-git add .
-git commit -m "Add MAX text chat"
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-```
+Публикация выполняется автоматически из ветки `main` через GitHub Actions. Workflow устанавливает зависимости командой `npm ci`, собирает проект и размещает каталог `dist`. Секреты в настройках хостинга не используются.
 
-Перед коммитом проверьте `git status`: `.env.local`, `node_modules` и `dist` исключены через `.gitignore`. Файл `package-lock.json` нужно сохранить в репозитории.
-
-Для статического хостинга: команда сборки `npm run build`, каталог публикации `dist`, версия Node.js 22. В приложении нет серверных маршрутов. `base: './'` позволяет размещать сборку в подпапке, в том числе на GitHub Pages. Секреты в настройках хостинга не нужны. После публикации проверьте подключение из браузера: доступность API и CORS зависят от выбранного хоста GREEN-API.
-
+Перед коммитом проверьте `git status`: `.env.local`, `node_modules` и `dist` исключены через `.gitignore`. После публикации подключение к GREEN-API нужно проверять из браузера, поскольку доступность API и CORS зависят от адреса инстанса.
 ## Источники
 
 - [Исходное задание, PDF](https://drive.google.com/file/d/1Ut39kkIs0QK-swnCsIPJc6pNqVIVGOD2/view)
