@@ -3,6 +3,8 @@
 
 [![Просмотры README](https://vbr.nathanchung.dev/badge?page_id=Richbanker.green-api-max-chat&text=README_Views)](https://github.com/Richbanker/green-api-max-chat)
 
+[Открыть проект](https://rebrand.ly/richbanker-max-chat)
+
 Небольшой React-интерфейс для личной текстовой переписки: подключение инстанса, создание чата по номеру, отправка сообщения и получение ответа. Визуальный ориентир — тёмный интерфейс [web.max.ru](https://web.max.ru/): список чатов слева, переписка справа, поле ввода внизу. На телефоне список и переписка открываются отдельно.
 
 React 19, TypeScript, Vite. Стили — обычный CSS, запросы — `fetch`. Из зависимостей приложения только `react` и `react-dom`. Сервер приложения и SDK не нужны.
